@@ -1,0 +1,299 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #1F2937;
+  }
+  /* Header Styling */
+  header {
+    background: #1F2937;
+    color: white;
+    padding: 20px;
+    position: relative;
+  }
+  
+  header nav {
+    position: absolute; 
+    top: 20px;
+    right: 20px;
+    z-index: 10; 
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+  }
+  
+  header nav a:hover {
+    text-decoration: none;
+  }
+  
+  /* Main Header Content */
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* Ensures child elements stay within bounds */
+    padding-top: 60px; /* Adds space below the navigation links */
+  }
+  
+  .header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .header-text {
+    max-width: 60%;
+  }
+  
+  .header-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .header-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .signup-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .signup-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Image Styling */
+  .header-image {
+    max-width: 30%; 
+    text-align: center; 
+  }
+  
+  .header-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px ;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .header-text, .header-image {
+      max-width: 100%;
+    }
+  
+    .header-image {
+      margin-top: 20px;
+    }
+  
+    header nav {
+      position: static; /* Allows nav links to stack naturally on smaller screens */
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  
+  /* Sections */
+  section {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+  
+  #description {
+    background: #0a3b85; 
+    padding: 40px 20px;
+  }
+  
+  #description h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5699cf;
+    font-size: 2em;
+  }
+  
+  /* Container for the description items */
+  #description .description-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; 
+  }
+  
+  /* Each individual description box */
+  #description .description-item {
+    background: rgb(18, 92, 121); 
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    flex: 1;
+    max-width: 300px;
+    min-width: 200px; 
+  }
+  
+  /* Image box styling */
+  #description .image-box {
+    width: 100%; 
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+    border: 1px solid #476da7; 
+  }
+  
+  /* Image styling */
+  #description .image-box img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Ensures the image scales nicely */
+  }
+  
+  /* Text styling */
+  #description .description-item p {
+    color: #61d491;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    #description .description-container {
+      justify-content: center; 
+    }
+  
+    #description .description-item {
+      flex: 1 1 45%; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #description .description-item {
+      flex: 1 1 100%; 
+    }
+  }
+  
+  
+  
+  
+  /* Testimonials Section */
+  #testimonials {
+      background: #23313f;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+  }
+  
+  #testimonials h2 {
+      margin-bottom: 20px;
+      color: #b3acac;
+  }
+  
+  .testimonial {
+      display: inline-blocK;
+      margin: 15px;
+      max-width: 300px;
+      text-align: left;
+      background: rgb(122, 45, 45);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(230, 193, 193, 0.1);
+      padding: 15px;
+  }
+  
+  .testimonial img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .testimonial blockquote {
+      margin: 10px 0;
+      font-style: italic;
+      color: #3bee23;
+  }
+  
+  .testimonial cite {
+      display: block;
+      text-align: right;
+      margin-top: 5px;
+      font-weight: bold;
+      color: #11eb23;
+  }
+  
+  #signup {
+    background: #007BFF; 
+    color: white; 
+    text-align: center; 
+    padding: 40px 20px; 
+    border-radius: 8px; 
+  }
+  
+  #signup {
+    background: #007BFF; 
+    color: white; 
+    text-align: center; 
+    padding: 40px 20px; 
+    border-radius: 8px; 
+  }
+  
+  #signup {
+    background: #007BFF; 
+    color: white; 
+    text-align: center; 
+    padding: 40px 20px; 
+    border-radius: 8px;
+  }
+  
+  #signup p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .signup-link {
+    display: inline-block; 
+    color: white;
+    background: #4CAF50; 
+    padding: 10px 20px; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+  
+  .signup-link:hover {
+    background: #45a049; 
+    text-decoration: none;
+  }
+  
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
